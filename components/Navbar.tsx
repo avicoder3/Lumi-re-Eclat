@@ -21,14 +21,14 @@ const Navbar: React.FC<NavbarProps> = ({ cartCount, onCartClick }) => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-stone-100 shadow-sm">
+    <nav className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-stone-100 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Mobile menu button */}
           <div className="flex items-center md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-stone-600 hover:text-gold-600 p-2"
+              className="text-stone-900 hover:text-gold-600 p-2"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -42,35 +42,38 @@ const Navbar: React.FC<NavbarProps> = ({ cartCount, onCartClick }) => {
           </div>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex space-x-8 items-center">
+          <div className="hidden md:flex space-x-10 items-center">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-sm font-medium tracking-wide transition-colors duration-200 ${
-                  isActive(link.path) ? 'text-gold-600' : 'text-stone-600 hover:text-gold-500'
+                className={`text-sm font-bold tracking-widest transition-all duration-300 relative group ${
+                  isActive(link.path) ? 'text-stone-900' : 'text-stone-600 hover:text-stone-900'
                 }`}
               >
                 {link.name.toUpperCase()}
+                <span className={`absolute -bottom-1 left-0 w-full h-0.5 bg-gold-500 transform transition-transform duration-300 origin-left ${
+                  isActive(link.path) ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                }`}></span>
               </Link>
             ))}
           </div>
 
           {/* Icons */}
-          <div className="flex items-center space-x-4">
-            <button className="text-stone-400 hover:text-gold-600 transition-colors hidden sm:block">
-              <Search size={20} />
+          <div className="flex items-center space-x-5">
+            <button className="text-stone-900 hover:text-gold-600 transition-colors hidden sm:block">
+              <Search size={20} strokeWidth={2} />
             </button>
-            <Link to="/contact" className="text-stone-400 hover:text-gold-600 transition-colors hidden sm:block">
-              <User size={20} />
+            <Link to="/contact" className="text-stone-900 hover:text-gold-600 transition-colors hidden sm:block">
+              <User size={20} strokeWidth={2} />
             </Link>
             <button 
               onClick={onCartClick}
-              className="text-stone-800 hover:text-gold-600 transition-colors relative p-1"
+              className="text-stone-900 hover:text-gold-600 transition-colors relative p-1"
             >
-              <ShoppingBag size={22} />
+              <ShoppingBag size={22} strokeWidth={2} />
               {cartCount > 0 && (
-                <span className="absolute -top-1 -right-1 bg-gold-500 text-white text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center">
+                <span className="absolute -top-1 -right-1 bg-stone-900 text-white text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center border border-white">
                   {cartCount}
                 </span>
               )}
@@ -88,17 +91,17 @@ const Navbar: React.FC<NavbarProps> = ({ cartCount, onCartClick }) => {
                 key={link.path}
                 to={link.path}
                 onClick={() => setIsMenuOpen(false)}
-                className={`block px-3 py-3 rounded-md text-base font-medium ${
+                className={`block px-3 py-3 rounded-md text-base font-bold tracking-wide ${
                   isActive(link.path) 
-                    ? 'bg-gold-50 text-gold-700' 
-                    : 'text-stone-600 hover:bg-stone-50 hover:text-gold-600'
+                    ? 'bg-stone-50 text-stone-900 border-l-4 border-gold-500' 
+                    : 'text-stone-600 hover:bg-stone-50 hover:text-stone-900'
                 }`}
               >
                 {link.name}
               </Link>
             ))}
-            <div className="pt-4 flex items-center space-x-4 px-3">
-               <span className="text-stone-500 text-sm">Compte client</span>
+            <div className="pt-4 flex items-center space-x-4 px-3 border-t border-stone-100 mt-2">
+               <span className="text-stone-900 font-medium text-sm">Mon Compte</span>
             </div>
           </div>
         </div>
