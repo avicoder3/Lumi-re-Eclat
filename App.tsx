@@ -7,6 +7,9 @@ import Catalog from './pages/Catalog';
 import ProductDetail from './pages/ProductDetail';
 import Checkout from './pages/Checkout';
 import Contact from './pages/Contact';
+import About from './pages/About';
+import Journal from './pages/Journal';
+import JournalPost from './pages/JournalPost';
 import CartDrawer from './components/CartDrawer';
 import AIStylist from './components/AIStylist';
 import { Product, CartItem } from './types';
@@ -69,6 +72,9 @@ const App: React.FC = () => {
             <Route path="/product/:id" element={<ProductDetail onAddToCart={addToCart} />} />
             <Route path="/checkout" element={<Checkout cart={cart} clearCart={clearCart} />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/about" element={<About onAddToCart={addToCart} />} />
+            <Route path="/journal" element={<Journal />} />
+            <Route path="/journal/:id" element={<JournalPost />} />
             <Route path="*" element={<Home onAddToCart={addToCart} />} />
           </Routes>
         </main>

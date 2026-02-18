@@ -1,4 +1,4 @@
-import { Product } from './types';
+import { Product, BlogPost } from './types';
 
 export const CATEGORIES = [
   { id: 'bijoux_femme', label: 'Bijoux Femme', image: 'https://images.unsplash.com/photo-1611955167811-4711904bb9f8?q=80&w=1171&auto=format&fit=crop' },
@@ -221,4 +221,97 @@ export const LOOKBOOK_IMAGES = [
   { id: 2, image: "https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?q=80&w=600&auto=format&fit=crop", likes: 89 },
   { id: 3, image: "https://images.unsplash.com/photo-1713181215534-3b46c62e2018?q=80&w=1042&auto=format&fit=crop", likes: 256 },
   { id: 4, image: "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=600&auto=format&fit=crop", likes: 142 },
+];
+
+export const BLOG_POSTS: BlogPost[] = [
+  {
+    id: "1",
+    title: "Comment entretenir vos bijoux en or",
+    excerpt: "L'or est éternel, mais son éclat demande soin et attention. Découvrez nos conseils d'experts pour garder vos parures étincelantes au fil des années.",
+    content: `
+      <p>L'or est l'un des métaux les plus précieux au monde, apprécié pour son éclat chaleureux et sa durabilité. Cependant, même les bijoux de la plus haute qualité peuvent perdre de leur superbe s'ils sont exposés quotidiennement à la poussière, à la transpiration et aux produits chimiques.</p>
+      
+      <h3>1. Le nettoyage régulier</h3>
+      <p>Pour un entretien courant, un simple mélange d'eau tiède et de savon doux suffit. Laissez tremper vos bijoux pendant 15 à 20 minutes, puis frottez délicatement avec une brosse à dents à poils souples. Rincez abondamment à l'eau claire et séchez avec un chiffon en microfibre.</p>
+
+      <h3>2. Ce qu'il faut éviter</h3>
+      <p>Le chlore est l'ennemi numéro un de l'or. Évitez de porter vos bijoux à la piscine ou lors de l'utilisation de produits ménagers agressifs (eau de javel). De même, retirez-les avant de vous doucher, car les résidus de savon peuvent créer un film terne.</p>
+
+      <h3>3. Le rangement</h3>
+      <p>Rangez toujours vos pièces séparément dans une boîte à bijoux doublée de tissu ou dans des pochons individuels. Cela évite qu'elles ne se rayent entre elles. Les chaînes doivent être fermées et posées à plat pour éviter les nœuds.</p>
+
+      <blockquote>"Un bijou bien entretenu est un bijou qui se transmet de génération en génération."</blockquote>
+    `,
+    category: "Guide & Conseils",
+    date: "12 Octobre 2024",
+    image: "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=1200&auto=format&fit=crop",
+    author: "Elodie Martin",
+    readTime: "4 min"
+  },
+  {
+    id: "2",
+    title: "Tendances Montres Homme 2025",
+    excerpt: "Minimalisme ou complexité mécanique ? Cette année, le retour au vintage marque les poignets masculins avec élégance et caractère.",
+    content: `
+      <p>L'horlogerie masculine vit une année charnière. Après des années de course au diamètre XXL, 2025 marque le retour à des proportions plus classiques et à une élégance discrète.</p>
+
+      <h3>Le retour du petit diamètre</h3>
+      <p>Les boîtiers de 36mm à 39mm font un retour en force. Cette taille, considérée comme la norme au milieu du XXe siècle, offre un confort inégalé et une esthétique raffinée qui se glisse parfaitement sous une chemise.</p>
+
+      <h3>Le style "Field Watch"</h3>
+      <p>La montre militaire, robuste et lisible, s'impose comme l'accessoire du quotidien. Avec des cadrans épurés, des aiguilles luminescentes et des bracelets en cuir vieilli ou en tissu NATO, elle apporte une touche d'aventure urbaine.</p>
+
+      <h3>Les couleurs audacieuses</h3>
+      <p>Si le noir et le bleu marine restent des valeurs sûres, le vert forêt et le bordeaux profond s'invitent sur les cadrans. Ces teintes apportent de la profondeur et de l'originalité sans sacrifier l'élégance.</p>
+    `,
+    category: "Tendances",
+    date: "05 Novembre 2024",
+    image: "https://images.unsplash.com/photo-1619134778706-7015533a6150?q=80&w=1200&auto=format&fit=crop",
+    author: "Marc Dubois",
+    readTime: "6 min"
+  },
+  {
+    id: "3",
+    title: "Choisir la bonne texture d'extensions",
+    excerpt: "Kinky, Yaki, Body Wave... Un guide complet pour harmoniser parfaitement vos extensions avec votre texture naturelle.",
+    content: `
+      <p>Le secret d'une pose d'extensions réussie réside dans l'indétectabilité. Pour cela, le choix de la texture est tout aussi crucial que celui de la couleur.</p>
+
+      <h3>Comprendre votre texture naturelle</h3>
+      <p>Avant de choisir, analysez vos cheveux au naturel, lavés et séchés à l'air libre. Sont-ils lisses (Type 1), ondulés (Type 2), bouclés (Type 3) ou crépus (Type 4) ?</p>
+
+      <h3>Les textures lisses (Straight & Yaki)</h3>
+      <p>Le <strong>Silky Straight</strong> est idéal si vous avez les cheveux défrisés ou naturellement très raides. Le <strong>Yaki</strong>, quant à lui, imite la texture du cheveu afro défrisé : il a plus de volume et de matière, offrant un rendu plus naturel pour les cheveux texturés lissés.</p>
+
+      <h3>Les textures bouclées (Curly & Deep Wave)</h3>
+      <p>Le <strong>Body Wave</strong> offre une ondulation souple en "S", parfait pour un style glamour. Le <strong>Kinky Curly</strong> propose une boucle très serrée qui se fond à merveille avec les cheveux de type 3C à 4A.</p>
+    `,
+    category: "Beauté",
+    date: "28 Novembre 2024",
+    image: "https://images.unsplash.com/photo-1519699047748-de8e457a634e?q=80&w=1200&auto=format&fit=crop",
+    author: "Sarah K.",
+    readTime: "5 min"
+  },
+  {
+    id: "4",
+    title: "L'Histoire du Diamant Synthétique",
+    excerpt: "Éthique, écologique et tout aussi brillant. Comprendre la révolution des diamants de laboratoire qui bouscule la joaillerie traditionnelle.",
+    content: `
+      <p>Longtemps boudé par la haute joaillerie, le diamant de synthèse (ou diamant de laboratoire) gagne ses lettres de noblesse. Mais qu'est-ce qui le différencie réellement du diamant de mine ?</p>
+
+      <h3>Chimiquement identique</h3>
+      <p>Contrairement aux idées reçues, un diamant de laboratoire est un vrai diamant. Il possède la même structure cristalline, la même dureté (10 sur l'échelle de Mohs) et le même indice de réfraction que son homologue naturel. Seule son origine diffère.</p>
+
+      <h3>Un choix éthique</h3>
+      <p>L'argument majeur en faveur du diamant synthétique est son impact humain et environnemental. Sa production ne nécessite pas d'extraction minière, évitant ainsi la destruction des sols et garantissant l'absence de conflits liés à son commerce.</p>
+
+      <h3>Une brillance accessible</h3>
+      <p>À qualité égale, un diamant de laboratoire coûte 30 à 40% moins cher. Cela permet de s'offrir une pierre plus grosse ou d'une meilleure pureté pour le même budget.</p>
+    `,
+    category: "Savoir-faire",
+    date: "10 Décembre 2024",
+    image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=1200&auto=format&fit=crop",
+    author: "Elodie Martin",
+    readTime: "3 min"
+  }
 ];

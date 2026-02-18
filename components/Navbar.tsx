@@ -14,7 +14,8 @@ const Navbar: React.FC<NavbarProps> = ({ cartCount, onCartClick }) => {
   const navLinks = [
     { name: 'Accueil', path: '/' },
     { name: 'Catalogue', path: '/catalog' },
-    { name: 'À Propos', path: '/about' }, // Placeholder link
+    { name: 'Journal', path: '/journal' },
+    { name: 'À Propos', path: '/about' },
     { name: 'Contact', path: '/contact' },
   ];
 

@@ -21,10 +21,23 @@ export type SortOption = 'price_asc' | 'price_desc' | 'popularity' | 'newest';
 export interface User {
   email: string;
   name: string;
+  username?: string;
 }
 
 export interface ChatMessage {
   role: 'user' | 'model';
   text: string;
   timestamp: Date;
+}
+
+export interface BlogPost {
+  id: string;
+  title: string;
+  excerpt: string;
+  content: string; // Contenu HTML riche
+  category: string;
+  date: string;
+  image: string;
+  author: string;
+  readTime: string;
 }
