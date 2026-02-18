@@ -37,7 +37,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ onAddToCart }) => {
   }, [id, navigate]);
 
   // ✏️ Remplacez ce numéro par celui du propriétaire (format international, sans + ni espaces)
-  const WHATSAPP_NUMBER = '33600000000';
+  const WHATSAPP_NUMBER = '242066257433';
 
   const handleWhatsApp = () => {
     const message = encodeURIComponent(
