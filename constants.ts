@@ -50,7 +50,7 @@ export const PRODUCTS: Product[] = [
     price: 95000,
     category: 'montres_femme',
     description: 'Une montre délicate avec cadran nacré et finition or rose. Résistante à l\'eau 3ATM.',
-    image: 'https://images.unsplash.com/photo-1507608158173-1dcec673a2e5?q=80&w=600&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1762071775668-68a2dfda0318?q=80&w=687&auto=format&fit=crop',
     isNew: true,
     stock: 8,
     rating: 4.6,
